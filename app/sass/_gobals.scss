@@ -1,0 +1,133 @@
+html{
+    font-size: 100%;
+    box-sizing:border-box;
+
+    
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: hsl(220, 20%, 30%);
+    height: 100%;
+    font-size: 12px;
+    background-color:hsl(240, 100% , 90%) ;
+    &.noscroll{
+        overflow: hidden;
+        @include breakpoint-up(large){
+            overflow: visible;
+        }
+    }
+}
+
+//Spacing
+.container{
+    
+    margin: 0 auto;
+
+    &--pall{
+        padding-top: 3.125rem;
+        padding-right: 1.5rem;
+        padding-bottom: 7.875rem;
+        padding-left: 1.5rem;
+
+        @include breakpoint-up(medium){
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+        }
+    }
+
+
+    &--py{
+        padding-top: 1.125rem;
+        padding-bottom: 1.125rem;
+        @include breakpoint-up(large){
+            
+        }
+    }
+
+    &--px{
+        padding-right: 1.25rem;
+        padding-left: 1.25rem;
+    }
+    
+   &--pt{
+       padding-top: 4.375rem;
+       @include breakpoint-up(large){
+        padding-top: 6rem;
+    }
+   }
+
+   &--pr{
+    padding-right: 1.25rem;
+    }
+
+    &--pb{
+        padding-bottom: 4.375rem;
+        @include breakpoint-up(large){
+            padding-bottom: 6rem;
+        }
+    }
+
+    &--pl{
+        padding-left: 1.25rem;
+    }
+}
+
+
+
+//Flexbox
+.flex{
+    display: flex;
+
+    &-jc-sb{
+        justify-content: space-between;
+    }
+
+    &-jc-c{
+        justify-content: center;
+    }
+
+    &-ai-c{
+        align-items: center;
+    }
+
+    &-dir-col{
+        flex-direction: column;
+    }
+}
+
+.no-flex{
+    display:block;
+    @include breakpoint-up(large){
+        display: flex;
+    }
+}
+
+a,a:visited, a:hover{
+    text-decoration: none;
+}
+
+
+//Visibility
+
+.hide-for-mobile{
+    // hode fr tablet and mobile
+    @include breakpoint-down(medium){
+        display:none;
+    }
+}
+
+.hide-for-desktop{
+    // hide for desktop viewport widths
+    @include breakpoint-up(large){
+        display:none;
+    }
+}

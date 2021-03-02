@@ -1,0 +1,27 @@
+.img{
+    flex-direction: row;
+    @include breakpoint-up(large){
+        flex-direction: column;
+    }
+    img{
+        width:200px;
+        height: 100%;
+    }
+
+    #tribute-info{
+        width: 100%;
+        
+        
+        
+        padding-left: 5px;
+        border: solid hsl(60, 100%, 95%) 5px;
+        p{
+            letter-spacing: 4px;
+        }
+
+        @include breakpoint-up(large){
+            width: 200px;
+        }
+    }
+
+}
